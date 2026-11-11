@@ -1,0 +1,9 @@
+{
+  "name": "PDFDost — All PDF tools",
+  "short_name": "PDFDost",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f8f9ff",
+  "theme_color": "#4f46e5",
+  "icons": [{ "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234f46e5'/%3E%3C/svg%3E", "sizes": "any", "type": "image/svg+xml" }]
+}

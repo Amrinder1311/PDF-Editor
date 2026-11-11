@@ -1,0 +1,10 @@
+{
+  "name": "pdfdost",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx serve . -l 5173",
+    "build": "npx --yes esbuild@0.24.0 js/app.js --bundle --format=iife --target=es2020 --outfile=dist/app.bundle.js",
+    "icons": "node scripts/build-icons.mjs node_modules/lucide-static/icons"
+  }
+}

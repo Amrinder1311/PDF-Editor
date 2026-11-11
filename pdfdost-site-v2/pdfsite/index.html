@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>PDFDost — Every PDF tool you need. Free, fast and private.</title>
+  <meta name="description" content="150+ free PDF tools in one place: merge, split, compress, convert, edit, sign, OCR and protect PDFs. Works on phone and laptop. Files never leave your device.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="PDFDost — Every PDF tool in one place">
+  <meta property="og:description" content="Merge, compress, convert, edit and sign PDFs for free — right in your browser.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234f46e5'/%3E%3Cpath d='M10 7h8l5 5v13H10z' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script>
+    // set theme before paint (avoids a white flash in dark mode)
+    try { var t = localStorage.getItem('theme'); t = t && JSON.parse(t);
+      if (t) document.documentElement.setAttribute('data-theme', t);
+      if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark');
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to content</a>
+  <main id="app" tabindex="-1">
+    <noscript><p style="padding:2rem;text-align:center">Please enable JavaScript to use the PDF tools.</p></noscript>
+  </main>
+  <script>
+    // Double-clicked (file://): browsers block JS modules there, so load the bundled copy.
+    // On a web server / VS Code Live Server: load the editable source in js/ directly.
+    (function () {
+      var s = document.createElement('script');
+      if (location.protocol === 'file:') { s.src = 'dist/app.bundle.js'; }
+      else { s.type = 'module'; s.src = 'js/app.js'; }
+      document.body.appendChild(s);
+    })();
+  </script>
+</body>
+</html>
